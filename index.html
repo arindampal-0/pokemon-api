@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon API</title>
+  </head>
+  <body>
+    <h1>Pokemon API</h1>
+    <h3>Pokemon API using Github Pages</h3>
+    <p>get the pokemon api from the below link</p>
+    <a href="" id="link"></a>
+
+    <script>
+      const a_tag = document.getElementById("link");
+      let url = `${location.protocol}//${window.location.host}/index.json`;
+      a_tag.setAttribute("href", url);
+      a_tag.innerText = url;
+    </script>
+  </body>
+</html>
