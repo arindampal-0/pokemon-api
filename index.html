@@ -14,7 +14,7 @@
 
     <script>
       const a_tag = document.getElementById("link");
-      let url = `${location.protocol}//${window.location.host}/index.json`;
+      let url = `${location.protocol}//${window.location.host}${window.location.pathname}/index.json`;
       a_tag.setAttribute("href", url);
       a_tag.innerText = url;
     </script>
