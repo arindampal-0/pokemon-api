@@ -5,19 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon API</title>
+    <link rel="icon" href="pokeball.png" type="image/png" />
+    <style>
+      * {
+        text-align: center;
+      }
+
+      .pokeball-image {
+        width: 10%;
+        height: auto;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Pokemon API</h1>
-      <h3>Pokemon API using Github Pages</h3>
-    </header>
-    
-    <p>get the pokemon api from the below link</p>
-    <a href="https://arindampal-0.github.io/pokemon-api/index.json" id="link">https://arindampal-0.github.io/pokemon-api/index.json</a>
-    
-    <footer>
-      <p>The API data is thanks to <a href="https://github.com/jherr" target="_blank">Jack Herrington</a></p>
-      <p>The API data can be found in the following github repo of his <a href="https://github.com/jherr/pokemon" target="_blank">pokemon</a></p>
-    </footer>
+    <div class="container">
+      <div>
+        <header>
+          <h1>Pokemon API</h1>
+          <h3>Pokemon API using Github Pages</h3>
+          <img src="pokeball.png" alt="pokeball" class="pokeball-image" />
+        </header>
+
+        <main style="margin-top: 50px">
+          <p>get the pokemon api from the below link:</p>
+          <a href="" id="link"></a>
+          <br />
+          <p>
+            api docs can be found here
+            <a
+              href="https://github.com/ArindamPal-0/pokemon-api"
+              target="_blank"
+              >link</a
+            >
+          </p>
+        </main>
+      </div>
+
+      <footer style="margin-bottom: 30px">
+        <p>
+          The API data is thanks to
+          <a href="https://github.com/jherr" target="_blank">Jack Herrington</a>
+        </p>
+        <p>
+          The API data can be found in the following github repo of his
+          <a href="https://github.com/jherr/pokemon" target="_blank">pokemon</a>
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      const a_tag = document.getElementById("link");
+      let current_path = `${window.location.host}${window.location.pathname}`;
+
+      let hostName = current_path.split("/").slice(0, -1).join("/");
+      hostName = `${window.location.protocol}//${hostName}`;
+      api_url = `${hostName}/index.json`;
+      a_tag.setAttribute("href", api_url);
+      a_tag.innerText = api_url;
+    </script>
   </body>
 </html>
